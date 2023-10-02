@@ -1,0 +1,18 @@
+# IntelliJ
+.idea/
+.idea/*
+
+# Python tings
+__py_cache__/
+
+# Temp environment variables
+.env
+
+# Temporary/test directories
+llms-tests/*
+llms-tests/
+
+# Django 
+migrations/*
+migrations/
+db.sqlite3
