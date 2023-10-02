@@ -90,6 +90,19 @@ Example using `curl`:
 curl "http://127.0.0.1:8000?personality_type=INTJ&type_of_activity=relaxing escape&indoor_or_outdoor=indoor&number_of_people=1&social=social&location=San Francisco Bay Area&time=evening&date=Sunday October 1&over_21=true&filters=no music&filters=no alchohol"
 ```
 
+## Client Set up and Usage
+
+There's also a patched up front end that'll allow you to see quick results. To run the front end, navigate to the
+client directory and run the following commands:
+
+```bash
+npm install
+npm start
+```
+Ensure the Django RESTful framework is running at the same time as this client. You should be able to now access this 
+client through localhost:3000. Please be patient after pressing submit to get results. It takes a while to process the
+request and generate the results. Give it at least 45 seconds!
+
 # API Documentation
 
 ## Overview
