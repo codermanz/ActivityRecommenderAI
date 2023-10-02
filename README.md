@@ -20,8 +20,8 @@ activity suggestions.
 
 - [Python](https://www.python.org/) (3.7 or higher)
 - [Conda](https://docs.conda.io/en/latest/) (for managing and sharing environments)
-- [Metaphor API Key](https://www.metaphor.io/) (You need to sign up on Metaphor’s platform to get an API key)
-- [OpenAI API Key](https://www..openai.com) (You need to sign up on OpenAI's platform to get an API key)
+- [Metaphor API Key](https://metaphor.systems) (You need to sign up on Metaphor’s platform to get an API key)
+- [OpenAI API Key](https://www.openai.com) (You need to sign up on OpenAI's platform to get an API key)
 
 ## Limitations
 Given that the project was whipped up in a few hours, here's a few limitations:
