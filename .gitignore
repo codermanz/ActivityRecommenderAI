@@ -1,6 +1,7 @@
 # IntelliJ
 .idea/
 .idea/*
+client.iml
 
 # Python tings
 __pycache__/
@@ -18,3 +19,22 @@ llms-tests/
 migrations/*
 migrations/
 db.sqlite3
+
+# Ignore node  modules
+node_modules/
+
+# OS Related
+.DS_Store
+Thumbs.db
+
+# Ignore npm debug files
+npm-debug.log
+
+# Ignore build
+/build/
+client/package-lock.json
+
+# Tests
+client/src/App.test.js
+client/src/setupTests.js
+client/src/logo.svg
