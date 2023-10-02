@@ -7,8 +7,6 @@ from .serializers import ResponseSerializer
 from .third_party_api_adapters import execute_searching_workflow
 
 
-# Import your OpenAI/Metaphor logic here
-
 class SuggestionAPI(APIView):
     def get(self, request, *args, **kwargs):
         try:
@@ -34,14 +32,21 @@ class SuggestionAPI(APIView):
                 "filters": request.GET.getlist("filters", ""),
             }
 
+            print(user_inputs)
+
             # Call external API logic function and obtain the data
             suggestion_data, response_summary = execute_searching_workflow(user_inputs)
 
             # Create response data - convert DocumentContent Objects to a dictionary that's serializable
             response_data = {
+                # "suggestions": [{'url': suggestion.url.encode('utf-8', 'replace').decode('utf-8'),
+                #                  'title': suggestion.title.encode('utf-8', 'replace').decode('utf-8'),
+                #                  'description': suggestion.extract.encode('utf-8', 'replace').decode('utf-8')}
+                #                 for suggestion in suggestion_data],
                 "suggestions": [{'url': suggestion.url,
                                  'title': suggestion.title,
-                                 'description': suggestion.extract} for suggestion in suggestion_data],
+                                 'description': suggestion.extract}
+                                for suggestion in suggestion_data],
                 "response_summary": response_summary,
             }
 

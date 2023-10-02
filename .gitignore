@@ -3,7 +3,9 @@
 .idea/*
 
 # Python tings
-__py_cache__/
+__pycache__/
+/__pycache__/
+__pycache__/*
 
 # Temp environment variables
 .env
