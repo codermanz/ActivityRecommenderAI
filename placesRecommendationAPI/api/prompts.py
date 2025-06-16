@@ -24,7 +24,7 @@ def metaphor_direct_suggestions_prompt(inputs):
     :return:
     """
     # Over/under 21 string
-    if inputs['over_21'] == "true":
+    if str(inputs['over_21']).lower() == "true":
         age = "over 21"
     else:
         age = "under 21"
@@ -71,7 +71,7 @@ def gpt_direct_suggestions_prompt(inputs):
     :return:
     """
     # Over/under 21 string
-    if inputs['over_21'] == "true":
+    if str(inputs['over_21']).lower() == "true":
         age = "over 21"
     else:
         age = "under 21"

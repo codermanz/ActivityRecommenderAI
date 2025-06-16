@@ -126,7 +126,7 @@ def summarize_each_suggestion(list_of_suggestions):
     for content in list_of_suggestions:
         content.extract = truncate_to_tokens(BeautifulSoup(content.extract, "html.parser").
                                              get_text(separator=" ", strip=True))
-        summary_contents += f"{str(i)}. {content.title} + content.extract\n"
+        summary_contents += f"{str(i)}. {content.title} {content.extract}\n"
         i += 1
 
     # Prompt GPT to summarize each suggestion's content
